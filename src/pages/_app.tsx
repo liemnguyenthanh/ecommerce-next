@@ -1,11 +1,11 @@
-import type { AppProps } from 'next/app';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-import { NextPage } from 'next';
-import lightThemeOptions from '@/theme/appearance/lightTheme';
-import { CacheProvider, EmotionCache } from '@emotion/react';
-import createEmotionCache from '@/theme/cache/createEmotionCache';
 import '@/services/axios.config';
+import { createTheme } from '@/theme';
+import createEmotionCache from '@/theme/cache/createEmotionCache';
+import { CacheProvider, EmotionCache } from '@emotion/react';
+import { CssBaseline } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import { NextPage } from 'next';
+import type { AppProps } from 'next/app';
 
 type Props = AppProps & {
   Component: NextPage;
@@ -15,7 +15,7 @@ type Props = AppProps & {
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
-const mainTheme = createTheme(lightThemeOptions);
+const mainTheme = createTheme();
 
 function App({
   Component,
@@ -25,7 +25,6 @@ function App({
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={mainTheme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
       </ThemeProvider>

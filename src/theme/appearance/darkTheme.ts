@@ -2,10 +2,10 @@ import { ThemeOptions } from '@mui/material';
 import { lightBlue, lightGreen, red } from '@mui/material/colors';
 
 // Create a theme instance.
-const lightThemeOptions: ThemeOptions = {
+const darkThemeOptions: ThemeOptions = {
   palette: {
     primary: {
-      main: '#000',
+      main: lightBlue[200],
     },
     secondary: {
       main: lightGreen[200],
@@ -14,9 +14,9 @@ const lightThemeOptions: ThemeOptions = {
       main: red.A400,
     },
     background: {
-      default: '#f5f6f8',
+      default: '#000',
     },
   },
 };
 
-export default lightThemeOptions;
+export default darkThemeOptions;
