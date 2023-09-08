@@ -11,6 +11,14 @@
     "format:fix": "prettier --write --ignore-path .gitignore .",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "applypatch-msg": "echo '[Husky] applypatch-msg'",
+      "pre-applypatch": "echo '[Husky] pre-applypatch'",
+      "post-applypatch": "echo '[Husky] post-applypatch'",
+      "pre-commit": "echo '[Husky] pre-commit'"
+    }
+  },
   "dependencies": {
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
