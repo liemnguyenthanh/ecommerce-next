@@ -5,6 +5,7 @@ import { NextPage } from 'next';
 import lightThemeOptions from '@/theme/appearance/lightTheme';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import createEmotionCache from '@/theme/cache/createEmotionCache';
+import '@/services/axios.config';
 
 type Props = AppProps & {
   Component: NextPage;
