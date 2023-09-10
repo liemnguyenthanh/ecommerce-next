@@ -7,8 +7,6 @@ type Props = {
 };
 
 export const ProductList = ({ list }: Props) => {
-  console.log(list);
-
   const renderProducts = list.map((product) => (
     <Grid item xs={12} md={6} key={product.id}>
       <CardProduct product={product} />
@@ -16,7 +14,7 @@ export const ProductList = ({ list }: Props) => {
   ));
 
   return (
-    <Grid container spacing={1.5} overflow='scroll'>
+    <Grid container spacing={1.5}>
       {renderProducts}
     </Grid>
   );
