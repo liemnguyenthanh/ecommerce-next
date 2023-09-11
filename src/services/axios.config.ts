@@ -8,7 +8,7 @@ const axios = Axios.create({
 
 // request interceptor to add token to request headers
 axios.interceptors.request.use(
-  async (config: any) => {
+  async (config) => {
     // Implement function to get token
 
     const token = {
