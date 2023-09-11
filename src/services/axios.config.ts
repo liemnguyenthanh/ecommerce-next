@@ -10,7 +10,6 @@ const axios = Axios.create({
 axios.interceptors.request.use(
   async (config: any) => {
     // Implement function to get token
-    console.log('zo day');
 
     const token = {
       accessToken: 'my-access-token',
