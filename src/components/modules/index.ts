@@ -1,2 +1,2 @@
 // HOME
-export { Products as ProductsTopPage } from './home/products';
+export { Products as ProductsTopPage } from './home/product';

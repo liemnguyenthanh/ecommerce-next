@@ -11,7 +11,7 @@ export const HomePage = () => {
           <Grid item xs={12} md={6} height={1}>
             <Box
               height={1}
-              bgcolor={'#fff'}
+              bgcolor='primary.light'
               borderRadius={2}
               p={2}
               boxShadow={'-3px 3px 6px 6px #00000001'}
