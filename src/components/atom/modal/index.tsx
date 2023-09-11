@@ -25,7 +25,7 @@ const innerStyle = {
   bgcolor: 'background.default',
   borderRadius: 3,
 };
-
+œ;
 const iconCloseStyle = {
   position: 'absolute',
   top: 10,
