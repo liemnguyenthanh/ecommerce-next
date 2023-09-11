@@ -8,7 +8,7 @@ export const HomePage = () => {
     <Box bgcolor='background.default' height='100dvh' py={2}>
       <Container height={1}>
         <Grid container spacing={2} height={1}>
-          <Grid item xs={12} md={8} height={1}>
+          <Grid item xs={12} md={6} height={1}>
             <Box
               height={1}
               bgcolor={'#fff'}
@@ -19,7 +19,7 @@ export const HomePage = () => {
               <ProductsTopPage />
             </Box>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} md={6}>
             Chat Section
           </Grid>
         </Grid>

@@ -8,7 +8,7 @@ const lightThemeOptions: ThemeOptions = {
       main: '#000',
     },
     secondary: {
-      main: lightGreen[200],
+      main: '#ccc',
     },
     error: {
       main: red.A400,

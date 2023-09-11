@@ -10,33 +10,38 @@ const animationLine = keyframes`
     height: 15px;
   }
   50% {
-    height: 35px;
+    height: 40px;
   }
   100% {
     height: 15px;
   }
 `;
 
-const CustomLine = styled(Box)({
+const CustomLine = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  gap: 2,
+
   '.line': {
     display: 'inline-block',
     width: '15px',
     height: '15px',
     borderRadius: '15px',
-    backgroundColor: '#4b9cdb',
+    backgroundColor: theme.palette.primary.main,
   },
 
-  '.line:nth-last-child(1)': {
+  '.line:nth-last-of-type(1)': {
+    animation: animationLine + ' 1.5s 1.5s infinite',
+  },
+  '.line:nth-last-of-type(2)': {
     animation: animationLine + ' 1.5s 1s infinite',
   },
-  '.line:nth-last-child(2)': {
-    margin: '0 10px',
+  '.line:nth-last-of-type(3)': {
     animation: animationLine + ' 1.5s 0.5s infinite',
   },
-  '.line:nth-last-child(3)': {
+  '.line:nth-last-of-type(4)': {
     animation: animationLine + ' 1.5s 0s infinite',
   },
-});
+}));
 
 export const Loading = ({ variant = 'default' }: Props) => {
   return (
@@ -49,6 +54,7 @@ export const Loading = ({ variant = 'default' }: Props) => {
       gap={2}
     >
       <CustomLine>
+        <div className='line' />
         <div className='line' />
         <div className='line' />
         <div className='line' />

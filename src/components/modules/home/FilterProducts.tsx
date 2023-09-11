@@ -52,7 +52,8 @@ export const FilterProducts = () => {
         sx={{
           '& .MuiPaper-root': {
             boxShadow: '-3px 3px 6px 6px #00000010',
-            border: '1px solid #ccc',
+            border: 1,
+            borderColor: 'secondary.main',
           },
         }}
       >
@@ -61,7 +62,11 @@ export const FilterProducts = () => {
             fontSize={18}
             p={1.5}
             fontWeight={500}
-            sx={{ bgcolor: '#f3f3f3', borderBottom: '1px solid #ccc' }}
+            sx={{
+              bgcolor: '#f3f3f3',
+              borderBottom: 1,
+              borderColor: 'secondary.main',
+            }}
           >
             Filter
           </Typography>

@@ -1,5 +1,6 @@
 import { IProduct } from '@/types/product';
 import { Box, Typography } from '@mui/material';
+import Image from 'next/image';
 
 type Props = {
   product: IProduct;
@@ -9,14 +10,19 @@ export const CardProduct = ({ product }: Props) => {
   return (
     <Box
       borderRadius={2}
-      border={'1px solid #ccc'}
+      border={1}
+      borderColor='secondary.main'
       sx={{ cursor: 'pointer', overflow: 'hidden' }}
     >
-      <Box height={200}>
-        <img
+      <Box
+        height={200}
+        sx={{ img: { width: '100%', height: '100%', objectFit: 'contain' } }}
+      >
+        <Image
           src={product.image}
-          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-          alt=''
+          width={200}
+          height={200}
+          alt={product.title}
         />
       </Box>
       <Box p={1}>
